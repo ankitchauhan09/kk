@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Khushi 💖💖</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html,
+        body {
+            background-color: #efefef;
+            height: 100%;
+            margin: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            align-items: center;
+            display: flex;
+            height: 90%;
+            justify-content: center;
+            margin: 5%;
+            width: 90%;
+        }
+
+        .aspect {
+            padding-bottom: 70%;
+            position: relative;
+            width: 100%;
+        }
+
+        .message-container {
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .image-section {
+            width: 200px;
+            height: 200px;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-section {
+            padding: 20px;
+            background: white;
+            flex: 1;
+        }
+
+        .title {
+            color: #e91e63;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            color: #666;
+            line-height: 1.6;
+        }
+
+
+        .aspect-inner {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .flipbook {
+            height: 100%;
+            transition: margin-left 0.25s ease-out;
+            width: 100%;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .flipbook .page {
+            height: 100%;
+            width: 100%;
+        }
+
+        .flipbook .page img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="aspect">
+            <div class="aspect-inner">
+                <div class="flipbook" id="flipbook">
+                    <div class="page"><img src="images/Salmon Pink Romantic Birthday Photo Collage.jpg"
+                            draggable="false" alt="" /></div>
+                    <div class="page"><img
+                            src="images/Beige and Light Brown Minimal Modern Young Daughter Photo Collage (1).jpg"
+                            draggable="false" alt="" /></div>
+                    <div class="page"><img src="images/Minimalist Neutral Beige Tan Moodboard Photo Collage.jpg"
+                            draggable="false" alt="" /></div>
+                    <div class="page"><img src="images/Pink Illustrative Happy Birthday Photo Collage.jpg"
+                            draggable="false" alt="" /></div>
+                    <div class="page"><img src="images/Brown and White Polaroid Happy Birthday Photo Collage.jpg"
+                            draggable="false" alt="" /></div>
+                    <div class="page"><img src="images/Brown and White Polaroid Happy Birthday Photo Collage (1).jpg   "
+                            draggable="false" alt="" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script src="turn.js"></script>
+    <script>
+        var flipbookEL = document.getElementById('flipbook');
+
+        window.addEventListener('resize', function (e) {
+            flipbookEL.style.width = '';
+            flipbookEL.style.height = '';
+            $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+        });
+
+        $(flipbookEL).turn({
+            autoCenter: true
+        });
+
+    </script>
+</body>
+
+</html>
